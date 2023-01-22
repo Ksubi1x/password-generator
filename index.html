@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main class="wrapper">
+        <div class="container">
+            <section class="passwordGen">
+                <div class="result">
+
+                </div>
+
+                <div class="options">
+
+                    <!-- LENGTH -->
+                    
+                    <div class="length">
+                        <h3>Character Length</h3>
+                        <h3>0</h3>
+                    </div>
+
+                    <input type="range" min='5' max="50"  name="length" id="length">
+
+                    <!-- OPTIONS -->
+                    
+                    <div class="selections">
+
+                        <selection>
+                            <input type="checkbox" id="uppper">
+                            <h3>Include Uppercase Letters</h3>
+                        </selection>
+
+                        <selection>
+                            <input type="checkbox" id="lower">
+                            <h3>Include Lowercase Letters</h3>
+                        </selection>
+                        <selection>
+                            <input type="checkbox" id="numbers">
+                            <h3>Include Numbers</h3>
+                        </selection>
+                        <selection>
+                            <input type="checkbox" id="symbols">
+                            <h3>Include Symboles</h3>
+                        </selection>
+                        
+                    </div>
+                    
+                    <!-- GENERATE BUTTON -->
+
+                    <button id="generate">Generate</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
