@@ -6,58 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="wrapper">
         <div class="container">
             <section class="passwordGen">
+                
                 <div class="result">
 
+                    <h3>Password: </h3>
+                    <p id="finalPW"></p>
+                
                 </div>
+                
+                <!--  -->
 
                 <div class="options">
 
-                    <!-- LENGTH -->
-                    
-                    <div class="length">
-                        <h3>Character Length</h3>
-                        <h3>0</h3>
-                    </div>
-
-                    <input type="range" min='5' max="50"  name="length" id="length">
-
                     <!-- OPTIONS -->
-                    
+
                     <div class="selections">
 
-                        <selection>
-                            <input type="checkbox" id="uppper">
+                        <div class="lengthInput">
+                            <label for="length">Password length (Max: 15):</label>
+                            <h2 class="error" id="error">FIELD MUST BE A NUMBER.</h2>
+                            <input type="text" name="length" id="length" onkeyup="getInput()">
+                        </div>
+
+                        <selection class="selection">
+                            <input type="checkbox" id="upper" class="checkbox">
                             <h3>Include Uppercase Letters</h3>
                         </selection>
 
-                        <selection>
-                            <input type="checkbox" id="lower">
+                        <selection class="selection">
+                            <input type="checkbox" id="lower" class="checkbox">
                             <h3>Include Lowercase Letters</h3>
                         </selection>
-                        <selection>
-                            <input type="checkbox" id="numbers">
+
+                        <selection class="selection">
+                            <input type="checkbox" id="numbers" class="checkbox">
                             <h3>Include Numbers</h3>
                         </selection>
-                        <selection>
-                            <input type="checkbox" id="symbols">
-                            <h3>Include Symboles</h3>
+
+                        <selection class="selection">
+                            <input type="checkbox" id="symbols" class="checkbox">
+                            <h3>Include Symbols</h3>
                         </selection>
                         
                     </div>
                     
                     <!-- GENERATE BUTTON -->
 
-                    <button id="generate">Generate</button>
+                    <button id="generate" onclick="checkOptions()">Generate</button>
+                    
+                    <!-- Results -->
+
                 </div>
+                
             </section>
 
         </div>
+        
     </main>
     
 

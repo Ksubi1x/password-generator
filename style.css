@@ -3,44 +3,102 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    color: white;
+    font-size: 17px;
 }
 
 .wrapper {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(#C5C6C7, #CCCAC9);
+    background: linear-gradient(#D7DAD9, #9BA1AB);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
 }
 
 .passwordGen {
-    background: linear-gradient(#B0B5B9, #D5DDE0);
+    background: linear-gradient(#A3AABE  , #A3AABE );
     padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-.length {
+.options {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+   
+}
+
+
+
+.lengthInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #length {
-    width: 100%;
-    -webkit-appearance: none;
-    height: 15px;
+    border: none;
     outline: none;
-    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 0px 10px;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.selections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 10px;
     border-radius: 10px;
 }
 
-#length::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    
+.selection {
+    display: flex;
+    gap: 15px;
+}
+
+#generate {
+    margin: 0px 10px;
+    padding: 10px;
+    background-color: rgb(144, 154, 176);
+    outline: none;
+    border: none;
     cursor: pointer;
-    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate:hover {
+    background-color: rgb(125, 134, 153);
+    transition: 0.3s;
+}
+
+.result {
+    background-color: #A3B8BE;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    .container {
+        width: 35%;
+    }
 }
