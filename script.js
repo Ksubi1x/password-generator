@@ -6,7 +6,6 @@ let lengthBox = document.getElementById('length')
 
 let genButton = document.getElementById('generate')
 
-
 let errorText = document.getElementById('error')
 
 let pwLength 
